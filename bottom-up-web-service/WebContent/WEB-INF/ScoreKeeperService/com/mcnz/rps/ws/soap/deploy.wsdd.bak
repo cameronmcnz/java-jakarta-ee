@@ -1,0 +1,38 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ScoreKeeperService WSDL service -->
+
+  <service name="ScoreKeeper" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://soap.ws.rps.mcnz.com"/>
+      <parameter name="wsdlServiceElement" value="ScoreKeeperService"/>
+      <parameter name="schemaQualified" value="http://soap.ws.rps.mcnz.com"/>
+      <parameter name="wsdlServicePort" value="ScoreKeeper"/>
+      <parameter name="className" value="com.mcnz.rps.ws.soap.ScoreKeeperSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="ScoreKeeper"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getLosses" qname="operNS:getLosses" xmlns:operNS="http://soap.ws.rps.mcnz.com" returnQName="retNS:getLossesReturn" xmlns:retNS="http://soap.ws.rps.mcnz.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="increaseWins" qname="operNS:increaseWins" xmlns:operNS="http://soap.ws.rps.mcnz.com" returnQName="retNS:increaseWinsReturn" xmlns:retNS="http://soap.ws.rps.mcnz.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="increaseTies" qname="operNS:increaseTies" xmlns:operNS="http://soap.ws.rps.mcnz.com" returnQName="retNS:increaseTiesReturn" xmlns:retNS="http://soap.ws.rps.mcnz.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="increaseLosses" qname="operNS:increaseLosses" xmlns:operNS="http://soap.ws.rps.mcnz.com" returnQName="retNS:increaseLossesReturn" xmlns:retNS="http://soap.ws.rps.mcnz.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getWins" qname="operNS:getWins" xmlns:operNS="http://soap.ws.rps.mcnz.com" returnQName="retNS:getWinsReturn" xmlns:retNS="http://soap.ws.rps.mcnz.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getTies" qname="operNS:getTies" xmlns:operNS="http://soap.ws.rps.mcnz.com" returnQName="retNS:getTiesReturn" xmlns:retNS="http://soap.ws.rps.mcnz.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <parameter name="allowedMethods" value="getLosses increaseWins increaseLosses getWins increaseTies getTies"/>
+
+  </service>
+</deployment>

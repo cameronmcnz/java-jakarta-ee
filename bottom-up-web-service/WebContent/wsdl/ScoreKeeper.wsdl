@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://soap.ws.rps.mcnz.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://soap.ws.rps.mcnz.com" xmlns:intf="http://soap.ws.rps.mcnz.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://soap.ws.rps.mcnz.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getLosses">
+    <complexType/>
+   </element>
+   <element name="getLossesResponse">
+    <complexType>
+     <sequence>
+      <element name="getLossesReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="increaseWins">
+    <complexType/>
+   </element>
+   <element name="increaseWinsResponse">
+    <complexType>
+     <sequence>
+      <element name="increaseWinsReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="increaseTies">
+    <complexType/>
+   </element>
+   <element name="increaseTiesResponse">
+    <complexType>
+     <sequence>
+      <element name="increaseTiesReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="increaseLosses">
+    <complexType/>
+   </element>
+   <element name="increaseLossesResponse">
+    <complexType>
+     <sequence>
+      <element name="increaseLossesReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getWins">
+    <complexType/>
+   </element>
+   <element name="getWinsResponse">
+    <complexType>
+     <sequence>
+      <element name="getWinsReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getTies">
+    <complexType/>
+   </element>
+   <element name="getTiesResponse">
+    <complexType>
+     <sequence>
+      <element name="getTiesReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="increaseWinsResponse">
+
+      <wsdl:part element="impl:increaseWinsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getWinsRequest">
+
+      <wsdl:part element="impl:getWins" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="increaseTiesResponse">
+
+      <wsdl:part element="impl:increaseTiesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getWinsResponse">
+
+      <wsdl:part element="impl:getWinsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLossesRequest">
+
+      <wsdl:part element="impl:getLosses" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="increaseLossesRequest">
+
+      <wsdl:part element="impl:increaseLosses" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTiesResponse">
+
+      <wsdl:part element="impl:getTiesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLossesResponse">
+
+      <wsdl:part element="impl:getLossesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTiesRequest">
+
+      <wsdl:part element="impl:getTies" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="increaseTiesRequest">
+
+      <wsdl:part element="impl:increaseTies" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="increaseLossesResponse">
+
+      <wsdl:part element="impl:increaseLossesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="increaseWinsRequest">
+
+      <wsdl:part element="impl:increaseWins" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="ScoreKeeper">
+
+      <wsdl:operation name="getLosses">
+
+         <wsdl:input message="impl:getLossesRequest" name="getLossesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getLossesResponse" name="getLossesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="increaseWins">
+
+         <wsdl:input message="impl:increaseWinsRequest" name="increaseWinsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:increaseWinsResponse" name="increaseWinsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="increaseTies">
+
+         <wsdl:input message="impl:increaseTiesRequest" name="increaseTiesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:increaseTiesResponse" name="increaseTiesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="increaseLosses">
+
+         <wsdl:input message="impl:increaseLossesRequest" name="increaseLossesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:increaseLossesResponse" name="increaseLossesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getWins">
+
+         <wsdl:input message="impl:getWinsRequest" name="getWinsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getWinsResponse" name="getWinsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTies">
+
+         <wsdl:input message="impl:getTiesRequest" name="getTiesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getTiesResponse" name="getTiesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ScoreKeeperSoapBinding" type="impl:ScoreKeeper">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getLosses">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getLossesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getLossesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="increaseWins">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="increaseWinsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="increaseWinsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="increaseTies">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="increaseTiesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="increaseTiesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="increaseLosses">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="increaseLossesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="increaseLossesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getWins">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getWinsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getWinsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTies">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getTiesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getTiesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="ScoreKeeperService">
+
+      <wsdl:port binding="impl:ScoreKeeperSoapBinding" name="ScoreKeeper">
+
+         <wsdlsoap:address location="http://localhost:8080/bottom-up-web-service/services/ScoreKeeper"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "formidable": "^2.0.1",
+    "fs": "^0.0.1-security"
+  }
+}

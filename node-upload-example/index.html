@@ -1,0 +1,22 @@
+<html>
+<head><title>Node Example</title></head>
+<body>
+
+
+<input id="fileupload" type="file" name="fileupload" />
+
+<button id="upload-button" onclick="uploadFile()"> 
+Upload </button>
+
+<script>
+async function uploadFile() {
+    let formData = new FormData();           
+    formData.append("fileupload", fileupload.files[0]);
+    await fetch('http://localhost/upload', {
+      method: "POST", 
+      body: formData
+    });    
+}
+</script>
+</body>
+</html>
